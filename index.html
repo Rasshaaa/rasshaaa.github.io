@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Style & Icons Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Countdown by SimplyCountdown -->
+  <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css"/>
+  <script src="countdown/simplyCountdown.min.js"></script>
+
+  <!-- AOS Style Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Own Style via CSS -->
+  <link rel="stylesheet" href="style.css">
+  <title>Wedding oibaF</title>
+</head>
+<body>
+  <!-- Hero Section (Picture, Countdown, Button) -->
+  <section id="Hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+    <main data-aos="zoom-out" data-aos-duration="800" data-aos-delay="100">
+      <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
+      <h1>oibaF & Fajrin</h1>
+      <p>Akan melangsungkan resepsi pernikahan dalam: </p>
+      <div class="simply-countdown"></div>
+      <a href="#Home" class="btn-undangan btn btn-lg mt-4" data-aos="zoom-out" data-aos-delay="900" onclick="enableScroll()">Lihat Undangan</a>
+    </main>
+  </section>
+  
+  <!-- Home Section (Navbar dan Content) -->
+  <section id="Home" class="home">
+    <!-- Home Navbar (Brand di kiri, links di kanan, transisi ke bawah saat responsive) -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container" data-aos="fade-right" data-aos-duration="500" data-aos-offset="100">
+        <a class="navbar-brand" href="#Hero">Fernida</a>
+        <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto" data-aos="fade-left" data-aos-duration="500" data-aos-offset="50">
+          <a class="nav-link" href="#Home">Home</a>
+          <a class="nav-link" href="#Info">Info</a>
+          <a class="nav-link" href="#Story">Story</a>
+          <a class="nav-link" href="#Gallery">Gallery</a>
+          <a class="nav-link" href="#RSVP">RSVP</a>
+          <a class="nav-link" href="#Gifts">Gifts</a>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Home Content Section (Opening)-->
+    <div class="container opening">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center" data-aos="fade-down" data-aos-duration="500"
+        data-aos-delay="200">
+          <h2>Acara Pernikahan</h2>
+          <h3>Diselenggarakan pada 13 Agustus 2032 di Jakarta Timur, DKI Jakarta.</h3>
+          <p>Oleh karena itu, dengan segala hormat kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan kami.</p>
+        </div>
+      </div>
+
+      <!-- Home Content Section (Content about The Couple) -->
+      <div class="row couple">
+        <div class="col-lg-6 oibaF">
+          <div class="row">
+            <div class="col-8 text-end">
+              <h3 data-aos="zoom-in" data-aos-duration="500">Muhamad oibaF Alfarizie</h3>
+              <p data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus corporis recusandae ipsa tempore qui animi asperiores cupiditate iste nobis?</p>
+              <p data-aos="fade-down-right" data-aos-duration="500" data-aos-offset="50" data-aos-delay="500">Putra dari Bpk. R <br> Dan <br> Ibu I</p>
+            </div>
+            <div class="col-4">
+              <img src="img/wajah1.png" alt="" class="img-responsive rounded-circle">
+            </div>
+          </div>
+        </div>
+
+        <span class="heart"><i class="bi bi-suit-heart-fill"></i></span>
+
+        <div class="col-lg-6 Fajrin">
+          <div class="row">
+            <div class="col-4">
+              <img src="img/wajah2.png" alt="" class="img-responsive rounded-circle">
+            </div>
+            <div class="col-8">
+              <h3 data-aos="zoom-in" data-aos-duration="500">Fajrin Amalia Fauziah</h3>
+              <p data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt fugiat veniam sapiente aliquam non deleniti sequi. Quo eaque dicta quam.</p>
+              <p data-aos="fade-down-left" data-aos-duration="500" data-aos-offset="50" data-aos-delay="500">Putra dari Bpk. R <br> Dan <br> Ibu I</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section (Alamat secara text, Alamat secara Google Maps embed HTML, 2 Cards untuk Akad dan Resepsi) -->
+  <section id="Info" class="info">
+    <div class="container container-info">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center">
+          <h2 data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">Informasi Acara</h2>
+          <p class="alamat" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">Alamat : Masijd Istiqlal <br> Jl. Taman Wijaya Kusuma, Ps. Baru, Kec. Sawah Besar, Kota Jakarta Pusat</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.705570690427!2d106.82881507448569!3d-6.170164660464758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ce68b5e01d%3A0xcafaf042d5840c6c!2sMasjid%20Istiqlal!5e0!3m2!1sid!2sid!4v1694650007902!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="400"></iframe>
+          <p class="description" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">Diharapkan untuk tidak salah alamat dan tanggal, manakala tiba di tujuan namun tak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi anda salah jadwal. </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-5 col-10">
+          <div class="card text-center mb-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="600">
+            <div class="card-header">
+              Akad Nikah
+            </div>
+
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <i class="bi bi-clock d-block"></i>
+                  <span>08.00 - 10.00 WIB</span>
+                </div>
+                <div class="col-md-6">
+                  <i class="bi bi-calendar2-heart d-block"></i>
+                  <span>Jum'at, 13 Agustus 2032</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              Saat acara akad nikah diharapkan untuk tetap kondusif menjaga kekhidmatan dan kehusyukan seluruh prosesi. 
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-10">
+          <div class="card text-center" data-aos="fade-left" data-aos-duration="500" data-aos-delay="600">
+            <div class="card-header">
+              Resepsi
+            </div>
+
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <i class="bi bi-clock d-block"></i>
+                  <span>11.00 WIB - selesai</span>
+                </div>
+                <div class="col-md-6">
+                  <i class="bi bi-calendar2-heart d-block"></i>
+                  <span>Jum'at, 13 Agustus 2032</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              Saat acara resepsi diharapkan untuk tetap kondusif namun tetap nikmati acaranya. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story (Picture and Bubble Chat for describing the story) -->
+  <section id="Story" class="story">
+    <div class="container container-story">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center" data-aos="fade-down" data-aos-duration="500"
+        data-aos-delay="200">
+          <span>Bagaimana Semua Hal Baik Ini Bermula</span>
+          <h2>Cerita Kami</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dolorum vitae voluptatem voluptatum ad dolorem?</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <ul class="timeline" data-aos="fade-up" data-aos-duration="500"
+          data-aos-delay="200">
+            <li>
+              <div class="timeline-img" style="background-image: url(https://picsum.photos/id/100/300/300);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Pertama Bertemu</h3>
+                  <span>1 Januari 2022</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ducimus!</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-img" style="background-image: url(https://picsum.photos/id/101/300/300);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Mulai Dekat</h3>
+                  <span>Februari 2022</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, cum recusandae soluta molestiae non illo.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-img" style="background-image: url(https://picsum.photos/id/102/300/300);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Berpacaran</h3>
+                  <span>13 Juni 2022</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, cum recusandae soluta molestiae non illo.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-img" style="background-image: url(https://picsum.photos/id/103/300/300);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Tunangan</h3>
+                  <span>13 Juni 2028</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, cum recusandae soluta molestiae non illo.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery (Gallery supported by Bootstrap with caption in it) -->
+  <section id="Gallery" class="gallery">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center" data-aos="fade-down" data-aos-duration="500"
+        data-aos-delay="200">
+          <span>Memori Kisah Kami</span>
+          <h2>Galeri Foto</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dolorum vitae voluptatem voluptatum ad dolorem?</p>
+        </div>
+      </div>
+
+      <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center" data-aos="fade-up" data-aos-duration="500"
+      data-aos-delay="200">
+        <div class="col mt-3">
+          <!-- Isi dengan direktori file gambar untuk tag a (img/gallery/nama-file-gambar) -->
+          <!-- Isi dengan direktori fie gambar untuk tag img (img/gallery/thumbnail/nama-file) -->
+          <a href="https://picsum.photos/id/200/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
+            <img src="https://picsum.photos/id/200/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="https://picsum.photos/id/201/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
+            <img src="https://picsum.photos/id/201/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="https://picsum.photos/id/202/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
+            <img src="https://picsum.photos/id/202/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="https://picsum.photos/id/203/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
+            <img src="https://picsum.photos/id/203/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="https://picsum.photos/id/204/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
+            <img src="https://picsum.photos/id/204/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">    
+          <a href="https://picsum.photos/id/300/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
+            <img src="https://picsum.photos/id/300/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP (Form for name, total of people, and the status) -->
+  <section id="RSVP" class="rsvp">
+    <main data-aos="zoom-out" data-aos-duration="800">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center">
+          <h2>Konfirmasi Kehadiran</h2>
+          <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran anda</p>
+        </div>
+      </div>
+
+      <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" 
+      action="https://script.google.com/macros/s/AKfycbzMSQWo5sQ2kkCL3Ow0u3xUJVbrqFTE-_faNfiQHos2dVS3J49q5w83R8dfU5SuxL7Z_w/exec" id="my-form">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="Nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="Nama" placeholder="Masukkan Nama">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="Jumlah" class="form-label">Jumlah</label>
+            <input type="number" class="form-control" id="jumlah" name="Jumlah" min="1" max="100" length="1" value="1">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="Status" class="form-label">Konfirmasi</label>
+            <select name="Status" id="status" class="form-select">
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary">Kirim</button>
+        </div>
+      </form>
+    </main>
+  </section>
+
+  <!-- Gifts (Bank or Saweria QR Code) -->
+  <section class="gifts" id="Gifts">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="500"
+      data-aos-delay="200" data-aos-offset="400">
+        <div class="col-md-8 col-10 text-center">
+          <span>Ungkapan Tanda Kasih</span>
+          <h2>Kirim Hadiah</h2>
+          <p>Jangan lupa berikan hadiah kepada kami ya 😊</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center">
+        <div class="col-md-6">
+          <ul class="list-group" data-aos="fade-up" data-aos-duration="500"
+          data-aos-delay="200" data-aos-offset="200">
+            <li class="list-group-item">
+              <div class="fw-bold">BCA</div>
+              123456789 - Muhamad oibaF Alfarizie
+            </li>
+            <li class="list-group-item">
+              <div class="fw-bold">Mandiri</div>
+              123456789 - Muhamad oibaF Alfarizie
+            </li>
+            <li class="list-group-item">
+              <div class="fw-bold">Saweria</div>
+              <img src="img/QR-Code.png" alt="Saweria QR Code" class="img-thumbnail" width="150">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Copyright and Social Media Links) -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <small class="block">&copy; 2023 Fernida Wedding. All Rights Reserved.</small>
+          <small class="block">Design By <a href="https://www.instagram.com/rasshaaa_.13/" target="_blank">@rasshaaa_.13</a>.</small>
+          
+          <!-- Social Media Links -->
+          <ul class="mt-3">
+            <li><a href="#" class="bi bi-instagram"></a></li>
+            <li><a href="#" class="bi bi-youtube"></a></li>
+            <li><a href="#" class="bi bi-twitter"></a></li>
+            <li><a href="#" class="bi bi-facebook"></a></li>
+            <li><a href="#" class="bi bi-tiktok"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="audio-container">
+    <audio id="bgm" autoplay loop>
+      <source src="audio/bgm.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-icon" style="display: none;">
+      <i class="bi bi-disc"></i>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  <!-- Lightbox for Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+  <!-- AOS JS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Own JS for Body -->
+  <script src="wedding.js"></script>
+</body>
+</html> 
