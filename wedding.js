@@ -147,3 +147,43 @@ window.addEventListener('scroll', function() {
         }
     }
 });
+
+// Preloader images dan Preloader website
+const images = ['img/bg-hero.jpeg', 'img/bg-hero2.jpeg', 'img/bg-hero3.jpeg', 'img/bg-hero4.jpg', 'img/bg-hero5.jpg', 'img/bg-hero6.jpeg'];
+
+function preloadImages(callback) {
+    let loadedImages = 0;
+
+    for (let i = 0; i < images.length; i++) {
+        const img = new Image();
+        img.src = images[i];
+
+        img.onload = function () {
+            loadedImages++;
+            if (loadedImages === images.length) {
+                callback();
+            }
+        };
+    }
+}
+
+function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        document.body.style.overflow = 'visible'; // Enable scrolling after preloader is hidden
+    }, getPreloaderDuration()); // Adjust the time based on connection speed
+}
+
+function getPreloaderDuration() {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const speed = connection ? connection.downlink : 5; // Default to a reasonable speed if the API is not supported
+
+    // Adjust the duration based on the connection speed
+    const duration = Math.min(speed, 5) * 1000; // Cap the duration at 5 seconds
+    return duration;
+}
+
+// Call the preloadImages function with hidePreloader as the callback
+preloadImages(hidePreloader);
