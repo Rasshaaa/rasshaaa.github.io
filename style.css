@@ -521,7 +521,7 @@ footer li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -670,7 +670,7 @@ footer li {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 62.5%;
+    font-size: 67.5%;
   }
 
   .simply-countdown > .simply-section {
@@ -734,7 +734,7 @@ footer li {
 /* Mobile */
 @media (max-width: 576px) {
   html{
-    font-size: 60%;
+    font-size: 65%;
   }
 
   .simply-countdown > .simply-section {
@@ -821,7 +821,7 @@ footer li {
 /* Khusus 430px */
 @media (max-width: 430px) {
   html{
-    font-size: 55%;
+    font-size: 60%;
   }
 
   .simply-countdown > .simply-section {
