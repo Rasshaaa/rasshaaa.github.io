@@ -1,5 +1,6 @@
 const undangan = document.querySelector('.btn-undangan');
 const nav = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
 
 // Sticky Navbar
 document.addEventListener('scroll', (e) => {
@@ -8,6 +9,17 @@ document.addEventListener('scroll', (e) => {
     } else {
     nav.classList.remove('fixed');
     }
+});
+
+// Auto close kalau links di navbar ditekan saat tampilan mobile
+navLinks.forEach(function(navLink) {
+    navLink.addEventListener('click', function() {
+        // Jika navbar dalam mode responsif (hamburger menu), tutup navbar setelah link diklik
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+        }
+    });
 });
 
 // Transition Hover for Button 'Undangan'
@@ -104,8 +116,6 @@ window.addEventListener("load", function() {
 });
 
 // Memindahkan class nav-active sesuai dengan ID section mereka
-// Ambil semua elemen tautan navbar
-const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
 // Tambahkan event listener untuk setiap tautan
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
@@ -163,11 +173,12 @@ function hidePreloader() {
     preloader.style.opacity = '0';
     setTimeout(() => {
         preloader.style.display = 'none';
+        AOS.init();
     }, 500);
 }
 
 // Call the hidePreloader function when all assets are loaded
 window.onload = function () {
-    hidePreloader();
     preloadImages();
+    hidePreloader();
 };
