@@ -182,3 +182,37 @@ window.onload = function () {
     preloadImages();
     hidePreloader();
 };
+
+// Nama tamu ditampilkan sesuai dengan form yang diisi
+if(!localStorage.getItem('tamu')){
+    document.getElementById("formAnjay").style.display = "flex";
+    
+} else {
+    const elm = document.querySelector('#namaSpan');
+    console.log(localStorage.getItem('tamu'));
+    elm.innerHTML = localStorage.getItem('tamu');
+}
+
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    const nameInput = document.getElementById('nameInput').value;
+    const relationshipSelect = document.getElementById('relationshipSelect').value;
+    
+    // Update URL with new parameters
+    const newUrl = `${nameInput} & ${relationshipSelect}`;
+    
+    localStorage.setItem('tamu' , newUrl)
+
+    const elm = document.querySelector('#namaSpan')
+    console.log(localStorage.getItem('tamu'));
+    elm.innerHTML = localStorage.getItem('tamu')
+
+    formAnjay.classList.add("hidden");
+
+    // Menghilangkan form nya
+    setTimeout(function() {
+        formAnjay.style.display = "none";
+    }, 1000);
+
+});

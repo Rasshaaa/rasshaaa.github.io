@@ -30,12 +30,31 @@
   <div id="preloader">
     <div class="loader"></div>
   </div>
+
+  <!-- Form for the name of guests -->
+  <div id="formAnjay" class="formAnjay" style="display: none;">
+    <form id="myForm" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="700">
+      <label for="nameInput">Nama :</label>
+      <input type="text" id="nameInput" name="name" required>
+  
+      <label for="relationshipSelect">Dengan :</label>
+      <select id="relationshipSelect" name="relationship" required>
+        <option value="" disabled selected>Pilih</option>
+        <option value="Istri">Istri</option>
+        <option value="Suami">Suami</option>
+        <option value="Keluarga">Keluarga</option>
+      </select>
+  
+      <button type="submit" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2000">Submit</button>
+    </form>
+  </div>
   
   <!-- Hero Section (Picture, Countdown, Button) -->
   <section id="Hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
     <main data-aos="zoom-out" data-aos-duration="800" data-aos-delay="100">
-      <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
-      <h1>oibaF & Fajrin</h1>
+      <h4>Kepada <span id="namaSpan"></span>, </h4>
+      <br>
+      <h1>X & Y</h1>
       <p>Akan melangsungkan resepsi pernikahan dalam: </p>
       <div class="simply-countdown"></div>
       <a href="#Home" class="btn-undangan btn btn-lg mt-4" data-aos="zoom-out" data-aos-delay="900" onclick="enableScroll()">Lihat Undangan</a>
@@ -77,10 +96,10 @@
 
       <!-- Home Content Section (Content about The Couple) -->
       <div class="row couple">
-        <div class="col-lg-6 oibaF">
+        <div class="col-lg-6 pria">
           <div class="row">
             <div class="col-8 text-end">
-              <h3 data-aos="zoom-in" data-aos-duration="500">Muhamad oibaF Alfarizie</h3>
+              <h3 data-aos="zoom-in" data-aos-duration="500">X</h3>
               <p data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus corporis recusandae ipsa tempore qui animi asperiores cupiditate iste nobis?</p>
               <p data-aos="fade-down-right" data-aos-duration="500" data-aos-offset="50" data-aos-delay="500">Putra dari Bpk. R <br> Dan <br> Ibu I</p>
             </div>
@@ -92,13 +111,13 @@
 
         <span class="heart"><i class="bi bi-suit-heart-fill"></i></span>
 
-        <div class="col-lg-6 Fajrin">
+        <div class="col-lg-6 wanita">
           <div class="row">
             <div class="col-4">
               <img src="img/wajah2.png" alt="" class="img-responsive rounded-circle">
             </div>
             <div class="col-8">
-              <h3 data-aos="zoom-in" data-aos-duration="500">Fajrin Amalia Fauziah</h3>
+              <h3 data-aos="zoom-in" data-aos-duration="500">Y</h3>
               <p data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt fugiat veniam sapiente aliquam non deleniti sequi. Quo eaque dicta quam.</p>
               <p data-aos="fade-down-left" data-aos-duration="500" data-aos-offset="50" data-aos-delay="500">Putra dari Bpk. R <br> Dan <br> Ibu I</p>
             </div>
@@ -262,32 +281,32 @@
           <!-- Isi dengan direktori file gambar untuk tag a (img/gallery/nama-file-gambar) -->
           <!-- Isi dengan direktori fie gambar untuk tag img (img/gallery/thumbnail/nama-file) -->
           <a href="https://picsum.photos/id/200/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
-            <img src="https://picsum.photos/id/200/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+            <img src="https://picsum.photos/id/200/300/400" alt="pria & wanita" class="img-fluid w-100 rounded">
           </a>
         </div>
         <div class="col mt-3">
           <a href="https://picsum.photos/id/201/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
-            <img src="https://picsum.photos/id/201/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+            <img src="https://picsum.photos/id/201/300/400" alt="pria & wanita" class="img-fluid w-100 rounded">
           </a>
         </div>
         <div class="col mt-3">
           <a href="https://picsum.photos/id/202/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
-            <img src="https://picsum.photos/id/202/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+            <img src="https://picsum.photos/id/202/300/400" alt="pria & wanita" class="img-fluid w-100 rounded">
           </a>
         </div>
         <div class="col mt-3">
           <a href="https://picsum.photos/id/203/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
-            <img src="https://picsum.photos/id/203/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+            <img src="https://picsum.photos/id/203/300/400" alt="pria & wanita" class="img-fluid w-100 rounded">
           </a>
         </div>
         <div class="col mt-3">
           <a href="https://picsum.photos/id/204/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
-            <img src="https://picsum.photos/id/204/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+            <img src="https://picsum.photos/id/204/300/400" alt="pria & wanita" class="img-fluid w-100 rounded">
           </a>
         </div>
         <div class="col mt-3">    
           <a href="https://picsum.photos/id/300/1140/641" data-toggle="lightbox" data-caption="This describes the image" data-gallery="gallery">
-            <img src="https://picsum.photos/id/300/300/400" alt="oibaF & Fajrin" class="img-fluid w-100 rounded">
+            <img src="https://picsum.photos/id/300/300/400" alt="pria & wanita" class="img-fluid w-100 rounded">
           </a>
         </div>
       </div>
@@ -338,7 +357,7 @@
   <section class="gifts" id="Gifts">
     <div class="container">
       <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="500"
-      data-aos-delay="200" data-aos-offset="400">
+      data-aos-delay="200" data-aos-offset="100">
         <div class="col-md-8 col-10 text-center">
           <span>Ungkapan Tanda Kasih</span>
           <h2>Kirim Hadiah</h2>
@@ -349,14 +368,14 @@
       <div class="row justify-content-center text-center">
         <div class="col-md-6">
           <ul class="list-group" data-aos="fade-up" data-aos-duration="500"
-          data-aos-delay="200" data-aos-offset="200">
+          data-aos-delay="200" data-aos-offset="100">
             <li class="list-group-item">
               <div class="fw-bold">BCA</div>
-              123456789 - Muhamad oibaF Alfarizie
+              123456789 - X
             </li>
             <li class="list-group-item">
               <div class="fw-bold">Mandiri</div>
-              123456789 - Muhamad oibaF Alfarizie
+              123456789 - X
             </li>
             <li class="list-group-item">
               <div class="fw-bold">Saweria</div>
