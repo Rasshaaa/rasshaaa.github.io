@@ -215,4 +215,6 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
         formAnjay.style.display = "none";
     }, 1000);
 
+    document.querySelector('#nama').value = nameInput;
+
 });
